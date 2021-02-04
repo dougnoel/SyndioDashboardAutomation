@@ -1,4 +1,4 @@
-# Sentinel.Example 1.0.5
+# Syndio Dashboard Automation
 Works with ![Sentinel](https://img.shields.io/github/v/release/dougnoel/sentinel?sort=semver&style=plastic)
 
 This project will walk you through setting up an automated testing framework using Sentinel which leverages Cucumber and Selenium without requiring programming knowledge. As this project has developed, more has been done to reduce the learning curve. The toll was initially meant to be used by Quality Assurance professionals wanting to learn how to program, but who also needed to get their job done. The approach was two-fold. First, make automation so easy that it can be written as quickly as manual testing, and run faster than manual testing. In doing so, freeing up your time to be able to learn. Second, it provides an entry point for coding by exposing some, but not all of the code in a manageable way, by encouraging you to create custom testing steps. As use of this project has grown, the importance of this example project has grown with it, as has the need for easier installation.
@@ -11,11 +11,12 @@ A final note before you begin using this tool. A tool is only as useful as you m
 This section will get you up and running, executing the example tests in 30 minutes or less. Most of the time investment is installing Git, Java, and Maven. If you have all those tools installed, it takes less than 10 minutes to get a test running. In that case, just skip to Section 1.2
 
 ## 1.1 Prerequisites
+**Because this uses a snapshot version that has not yet been pushed to Maven Central, you must clone the https://github.com/dougnoel/sentinel project and run `mvn install -DskipTests` in the project folder before this project will work.**
 You will need to have the following tools installed to use the project:
  * Git
- * Java (1.8)
+ * Java (11 or later)
  * Maven (2.5.4 or later)
- * Google Chrome (Recommended)
+ * Google Chrome
  * Eclipse (Recommnded)
  
 You can find installation scripts for these tools and installation instructions below. **NOTE:** These instructions and the accompanying installation scripts are provided AS IS. You may log tickets to improve the efficacy of the instructions or script, but there is no support for the scripts. They are being provided to help users who are not developers install development tools. If you are having difficulty installing any of these tools, please refer to the makers of these tools. Links to the makers of these tools are provided in [MAC-INSTALL.md](MAC-INSTALL.md) and [WIN-INSTALL.md](WIN-INSTALL.md).
@@ -60,10 +61,9 @@ Once they are installed, you can continue with Section 1.2. Alternately, you can
 You can check the installation by opening up a command window and typing the following:
 
 ```
-cd %HOMEPATH%\Projects\sentinel.example
 mvn test
 ```
-If Internet Explorer pops up and the tests run successfully, you are ready to move to Section 1.3.
+If Chrome pops up and the tests run successfully, you are ready to move to Section 1.3.
 
 ### 1.1.3 Linux Installation (5 - 20 minutes)
 There is no installation script for Linux as different flavors have different package managers. (You are encouraged to contribute a shell script for installing tools on you os.) After installing the appropriate tools, cd to the directory you want the project in and clone the repo.
@@ -71,7 +71,6 @@ There is no installation script for Linux as different flavors have different pa
 ```
 git clone https://github.com/dougnoel/sentinel.example.git
 cd sentinel.example
-cp conf/sentinel.linux.example.yml conf/sentinel.yml
 mvn test
 ```
 
@@ -83,8 +82,7 @@ If you have issues with installation, refer to the individual tool manufacturers
 If you already have all the tools installed (Git, Java, Maven), you can follow the following instructions on any operating system to get running quickly.
 
 1. On the command line change to the directory you wish to check the project out in and type `git clone https://github.com/dougnoel/sentinel.example.git`
-2. In the sentinel.example/conf directory there are a number of example configuration files. Copy the one for your operating system to a file titled `sentinel.yml`. Ensure the browser listed is one installed on your system.
-3. Change to the project `cd sentinel.example` and run `mvn test`. Provided that the configuration file exists, the project will run.
+2. Change to the project `cd sentinel.example` and run `mvn test`. Provided that the configuration file exists, the project will run.
 
 ## 1.3 Setting up the Project in Eclipse (10 minutes)
 Eclipse is the recommended IDE.
@@ -118,7 +116,7 @@ If a browser pops up and the tests run successfully, you have successfully impor
 
 ### 1.3.3 Updating the Sentinel Version
 1. Open the pom.xml
-2. Edit the version of sentinel in the pom.xml file and change it to the new version number. (If the new version is a snapshot, it will look like `1.0.4-SNAPSHOT`, otherwise something like `1.0.3`.) Save the file.
+2. Edit the version of sentinel in the pom.xml file and change it to the new version number. (If the new version is a snapshot, it will look like `1.0.5-SNAPSHOT`, otherwise something like `1.0.3`.) Save the file.
 3. Right-Click on the project in the **Package Explorer**.
 4. Select **Maven -> Update Project...**
 5. Click **Ok** in the dialog that appears.

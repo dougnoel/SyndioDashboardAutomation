@@ -1,0 +1,18 @@
+urls:
+   default: http://localhost:3000/
+   localhost: http://localhost:3000/
+elements:
+  gender_tab:
+    elementType: Button
+    text: "Gender"
+    xpath: "//*[contains(text(),'Gender')]"
+  race_tab:
+    elementType: Button
+    xpath: "//*[contains(text(),'Race')]"
+  pay_equity_gap:
+    xpath: "//*[contains(text(),'Pay Equity Gap')]/following-sibling::p"
+  employees_in_comparison:
+    xpath: "//*[contains(text(),'Employees in Comparison')]/following-sibling::p"
+  budget:
+    xpath: "//*[contains(text(),'Budget')]/following-sibling::p"
+    
