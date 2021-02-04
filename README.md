@@ -11,8 +11,9 @@ A final note before you begin using this tool. A tool is only as useful as you m
 This section will get you up and running, executing the example tests in 30 minutes or less. Most of the time investment is installing Git, Java, and Maven. If you have all those tools installed, it takes less than 10 minutes to get a test running. In that case, just skip to Section 1.2
 
 ## 1.1 Prerequisites
-**Because this uses a snapshot version that has not yet been pushed to Maven Central, you must clone the https://github.com/dougnoel/sentinel project and run `mvn install -DskipTests` in the project folder before this project will work.**
-You will need to have the following tools installed to use the project:
+**Because this uses a snapshot version that has not yet been pushed to Maven Central, you must clone the https://github.com/dougnoel/sentinel project and run** `mvn install -DskipTests` **in the project folder before this project will work.**
+<br>
+You will need to have the following tools installed to use the project (and the project above):
  * Git
  * Java (11 or later)
  * Maven (2.5.4 or later)
